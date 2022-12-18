@@ -1,0 +1,29 @@
+<h4>Les bon plans</h4>
+
+<div class="description">
+  <p>Les meilleurs offres pour sortir un peu de chez toi ! Mais après c'est paint paté tout le mois.  </p>
+</div>
+<div class="item">
+  <section class="wrapper">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-4" *ngFor="let sold of soldList">
+          <div class="card text-white card-has-bg click-col" [style.background-image]="'url(' + sold.img + ')'">
+          <img class="card-img d-none" [src]="sold.img" [alt]="sold.libelle">
+          <div class="card-img-overlay d-flex flex-column">
+            <div class="card-body">
+              <small class="card-meta mb-2">{{ sold.libelle }}</small>
+              <h4 class="card-title mt-0 "><a class="text-white"[href]="sold.lien">{{ sold.description }}</a>
+              </h4>
+              <small><i class="far fa-price"></i>  <p class="text-danger">{{ sold.price }} CFP</p></small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+</div>
+

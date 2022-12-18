@@ -1,0 +1,33 @@
+<h4>Shop en ligne</h4>
+<div class="description">
+  <p>Découvrez les produits de la Hess de notre territoire ! </p>
+</div>
+
+<div class="tools">
+  <button type="button" class="btn btn-primary" (click)="openDialogAdd()">Ajoutez</button>
+</div>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-4 g-4"  data-masonry='{"percentPosition": true }'>
+    <div *ngFor="let product of productList"  class="col">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>{{ product.libelle }}</mat-card-title>
+          <mat-card-subtitle> Prix :{{ product.price }} CFP</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image  [src]="product.img" [alt]="product.libelle">
+        <mat-card-content>
+          <p>
+            {{ product.description }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button type="button" class="btn btn-warning m-2" (click)="openDialogUpdate(product)">Modifier</button>
+          <button type="button" class="btn btn-danger" (click)="deleteProduct(product)">Supprimer</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  </div>
+</div>
+
+

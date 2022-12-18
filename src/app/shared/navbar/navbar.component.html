@@ -1,0 +1,24 @@
+<body id="body-pd">
+<header class="header" id="header">
+  <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+</header>
+<div class="l-navbar" id="nav-bar">
+  <nav class="nav">
+    <div>
+      <a href="#" class="nav_logo">
+        <span class="nav_logo-name">Magaz de chez nous !</span> </a>
+      <div class="nav_list">
+        <a routerLink="home" class="nav_link active"><i class='bx bx-home nav_icon' ></i> <span class="nav_name">Home</span></a>
+        <a routerLink="shop" class="nav_link"> <i class='bx bx-shopping-bag nav_icon'></i> <span class="nav_name">Shop</span> </a>
+        <a routerLink="sold" class="nav_link"> <i class='bx bx-accessibility nav_icon'></i> <span class="nav_name">Bon plan</span> </a>
+        <a routerLink="about" class="nav_link"> <i class='bx bx-mobile-vibration nav_icon'></i> <span class="nav_name">Contact</span> </a>
+        <a *ngIf="login == false" routerLink="login" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Login</span> </a>
+      </div>
+    </div>
+    <p>{{ user}}</p>
+    <a *ngIf="login == true"  class="nav_link" (click)="logout()"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
+  </nav>
+</div>
+<!--Container Main start-->
+
+<!--Container Main end-->

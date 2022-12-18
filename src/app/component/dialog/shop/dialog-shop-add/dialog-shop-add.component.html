@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Ajout d'un produit</h1>
+<div mat-dialog-content>
+  <div class="form-floating mb-3">
+    <input  type="text" class="form-control" id="libelle" name="libelle" [(ngModel)]="libelle">
+    <label for="libelle">Libelle</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input  type="text" class="form-control" id="description" name="description" [(ngModel)]="description">
+    <label for="description">Description</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input  type="text" class="form-control" id="img" name="img" [(ngModel)]="img"  >
+    <label for="img">URL de l'image</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input  type="number" class="form-control" id="price" name="price" [(ngModel)]="price">
+    <label for="price">Prix</label>
+  </div>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Annulez</button>
+  <button mat-button (click)="addProduct()" cdkFocusInitial>Ajoutez</button>
+</div>

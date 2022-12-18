@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Modification du produit "{{ data.libelle }}"</h1>
+<div mat-dialog-content>
+  <div class="form-floating mb-3">
+    <input  type="text" class="form-control" id="libelle" name="libelle" [(ngModel)]="data.libelle" [value]="data.libelle">
+    <label for="libelle">Libelle</label>
+    <mat-hint>{{data.libelle}}</mat-hint>
+  </div>
+  <div class="form-floating mb-3">
+    <input  type="text" class="form-control" id="description" name="description" [(ngModel)]="data.description" [placeholder]="data.description">
+    <label for="description">Description</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input  type="text" class="form-control" id="img" name="img" [(ngModel)]="data.img"  [placeholder]="data.img">
+    <label for="img">URL de l'image</label>
+  </div>
+  <div class="form-floating mb-3">
+    <input  type="number" class="form-control" id="price" name="price" [(ngModel)]="data.price" [placeholder]="data.price">
+    <label for="price">Prix</label>
+  </div>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Annulez</button>
+  <button mat-button (click)="updateProduct()" cdkFocusInitial>Modifier</button>
+</div>

@@ -1,0 +1,35 @@
+<h4>Connexion</h4>
+
+<div class="container-fluid">
+  <div class="row mt-5">
+    <div class="col"></div>
+    <div class="col-4">
+      <div class="card shadow">
+        <div class="card-body">
+          <form>
+            <div class="mb-3">
+              <h4 class="text-dark text-muted">Login</h4>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Adresse mail</label>
+              <input type="email" class="form-control" id="email" name="email"  [(ngModel)]="email">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Mot de passe</label>
+              <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password">
+            </div>
+            <button type="button" class="btn btn-info" (click)="login()">Connexion</button>
+            <div class="row">
+              <div class="col-md-6">
+                <a routerLink="/register" style="text-decoration: none;">Pas de compte ? <span class="text-danger">S'inscrire</span> </a>
+              </div>
+              <div class="col-md-6">
+                <a routerLink="" class="text-dark" style="text-decoration: none;">Mot de passe oublié ?</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

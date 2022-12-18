@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ag-acr2": {
+      "hosting": {
+        "AG_Projet_ACR2": [
+          "ag-acr2"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ag-acr2"
+  }
+}
