@@ -2,3 +2,32 @@
 <div class="description">
   <p></p>
 </div>
+
+<div class="row row-cols-1 g-3">
+  <div class="col" *ngFor="let produit of productList">
+    <h4>Produit</h4>
+    <div class="card">
+      <img [src]="produit.img" class="card-img-top"
+           [alt]="produit.libelle" />
+      <div class="card-body">
+        <h5 class="card-title">{{produit.libelle}}</h5>
+        <p class="card-text">
+          {{produit.description}}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="col" *ngFor="let sold of soldList">
+    <h4>Bon plan</h4>
+    <div class="card">
+      <img [src]="sold.img" class="card-img-top"
+           [alt]="sold.libelle" />
+      <div class="card-body">
+        <h5 class="card-title">{{sold.libelle}}</h5>
+        <p class="card-text">
+          {{sold.description}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
